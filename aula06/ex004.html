@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 004</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+
+        //document.write serve pra gente escrever no documento(na tela) e o length é para contar quantas letras tem.
+        document.write(`Olá <strong>${nome}</strong>, seu  nome tem ${nome.length} letras.<br>`)
+
+        //toUpperCase é para deixar tudo em maiúsculo.
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()} <br>`)
+        
+        //toLowerCase é para deixar tudo em minúsculo.
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()} <br>`)
+
+        var n1 = 1545.5
+        //O toFixed(2) é para ter duas casas depois da virgula, como se fosse representar dinheiro.
+        //E o replace() estamos trocando o ponto por virgula
+        document.write(`O número é ${n1.toFixed(2).replace('.', ',')}<br>`)
+
+        //O toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) é para representarmos exatamente em forma de dinheiro (Real)
+        // outros exemplos pra outras moedas
+        document.write('O número é ' + n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) +'<br>')
+        document.write('O número é ' + n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) +'<br>')
+        document.write('O número é ' + n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) +'<br>')
+    </script>
+</body>
+</html>

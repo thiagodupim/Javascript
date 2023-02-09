@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos Com DOM</title>
+
+    <style>
+        body {
+            background: rgb(79, 127, 218);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">Iniciando estudos com DOM.</h1>
+    <p>Aqui vai o resultado</p>
+    <p name="msg">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        /* O getElementsByTagName() é para selecionar mais de uma tag e entre colchete é como se estivessemos escolhendo qual a tag queremos que a primeira se inicia em 0. p1.innerText este comando foi para mostrar o que tem dentro da tag que salvamos em p1. Ou podemos usar o innerHtml para vim com todas as formatações to html da pág.  */
+        p1.style.color = "blue"
+
+        var corpo = window.document.body
+        corpo.style.background = "black"
+
+        var d = window.document.getElementById('msg') //Aqui é por id.
+        d.style.background = "green"
+        d.innerText = 'Estou aguardando...' //alterando o conteúdo da div.
+
+        var n = window.document.getElementsByName('msg')[0] //Alterando por name
+        n.innerText = 'Olá!'
+
+        var t = window.document.querySelector('h1.titulo') //Esta é a maneira pelo seletores CSS
+        t.style.color = 'blue'
+
+    </script>
+</body>
+</html>
